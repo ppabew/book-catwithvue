@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue.js App</title>
+<!--    <link rel="stylesheet" href="main.css" />-->
+  </head>
+  <body>
+    <div id="app">
+        <p>{{ message.value }}</p>
+        <p>{{ message.value.length }}</p>
+        <p>{{ list[2] }}</p>
+        <p>{{ list[num] }}</p>
+        <input type="text" v-bind:value="message.value">
+        <div v-bind:text-content.prop="message.value"></div>
+        <div v-bind:scroll.prop="message.scroll"></div>
+        <p>{{ count }}번 클릭했습니다.</p>
+        <button v-on:click="increment">카운트하기</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

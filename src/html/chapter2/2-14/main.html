@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="app2-14">
+        <input v-model="message">
+        <p>{{ message }}</p>
+        <textarea v-model="message"></textarea>
+        <pre>{{message}}</pre>
+        <label>
+            <input type="checkbox" v-model="val">
+        </label>
+
+        <label>
+            <input type="checkbox" v-model="valList" value="A">
+            <input type="checkbox" v-model="valList" value="B">
+            <input type="checkbox" v-model="valList" value="C">
+        </label>
+        <p>{{ valList }}</p>
+
+        <label><input type="radio" v-model="valList1" value="a">A</label>
+        <label><input type="radio" v-model="valList1" value="b">B</label>
+        <label><input type="radio" v-model="valList1" value="c">C</label>
+        <p>{{ valList1 }}</p>
+
+        <select v-model="valList2">
+            <option disabled="disabled">선택해주세요.</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+        </select>
+        <p>{{ valList2 }}</p>
+
+        <input type="file" v-on:change="handleChange">
+        <div v-if="preview"><img v-bind:src="preview" alt="이미지"></div>
+        <input type="range" v-model.number="val1"> {{ val1 }}
+        <input type="text" v-model.lazy="price"> {{ price }}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
