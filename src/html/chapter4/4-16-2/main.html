@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="app4-16-2">
+        <input v-model.number="width"> {{width}}<br>
+        <input v-model.number="halfWidth"> {{halfWidth}}
+        <ol>
+            <li> {{ computedData }} </li>
+            <li> {{ computedData }} </li>
+        </ol>
+        <ol>
+            <li>{{ methodsData() }}</li>
+            <li>{{ methodsData() }}</li>
+        </ol>
+        <input v-model.number="budget">원 이하 필터링하기
+        <input v-model.number="limit">개의 결과 출력하기
+        <p>{{matched.length}}개 중에 {{limited.length}}개를 출력하고 있습니다.</p>
+        <ul>
+            <li v-for="item in limited" v-bind:key="item.id">
+                {{item.name}} {{item.price}}원
+            </li>
+        </ul>
+        <p>{{filteredList}}</p>
+        <button v-on:click="order=!order">변경하기</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+</body>
+</html>

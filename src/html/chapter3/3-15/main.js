@@ -5,17 +5,21 @@ var app = new Vue({
         scrollY: 0,
         timer: null
     },
-    created: function () {
-        document.getElementById("myDiv").addEventListener('scroll',this.handleScroll)
+    created() {
+        window.addEventListener('scroll',this.handleScroll)
     },
 
     beforeUnmount: function () {
         window.removeEventListener('scroll', this.handleScroll)
     },
 
+    mounted() {
+        window.addEventListener("scroll", this.scrollFunction);
+    },
+
     methods: {
-        handleScroll: function () {
-            console.log('dddd')
+        handleScroll() {
+            console.log(scrollY)
             if(this.timer === null) {
                 this.timer = setTimeout(function () {
                     this.scrollY = window.scrollY
@@ -24,6 +28,9 @@ var app = new Vue({
 
                 }.bind(this), 200)
             }
+        },
+        scrollFunction() {
+            console.log("scrolling from method");
         }
     }
 })

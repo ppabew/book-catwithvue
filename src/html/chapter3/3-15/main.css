@@ -17,4 +17,9 @@ header {
 #scroll-test{
     height: 50px;
     overflow: scroll;
+    background-color: aqua;
+}
+
+body{
+    height: 1000vh;
 }
