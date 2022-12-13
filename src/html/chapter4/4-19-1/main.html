@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="app4-19-1">
+        <input v-focus>
+        <div>
+            <!--동영상1-->
+            <button v-on:click="video1=true">재생</button>
+            <button v-on:click="video1=false">중지</button>
+            <video src="movie1.mov" v-video="video1"></video>
+
+            <!--동영상2-->
+            <button v-on:click="video2=true">재생</button>
+            <button v-on:click="video2=false">중지</button>
+            <video src="movie2.mov" v-video="video2"></video>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js" integrity="sha512-zJYu9ICC+mWF3+dJ4QC34N9RA0OVS1XtPbnf6oXlvGrLGNB8egsEzu/5wgG90I61hOOKvcywoLzwNmPqGAdATA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+    <script src="main1.js"></script>
+</body>
+</html>
